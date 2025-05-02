@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -5,8 +6,19 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import Dashboard from "./pages/admin/Dashboard";
+import MaintenanceChat from "./pages/admin/MaintenanceChat";
+import Requests from "./pages/admin/Requests";
+import Settings from "./pages/admin/Settings";
+import AdminLayout from "./components/AdminLayout";
 
 const queryClient = new QueryClient();
+
+const AdminRoute = ({ component: Component }: { component: React.FC }) => (
+  <AdminLayout>
+    <Component />
+  </AdminLayout>
+);
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -16,7 +28,10 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/admin/dashboard" element={<AdminRoute component={Dashboard} />} />
+          <Route path="/admin/maintenance-chat" element={<AdminRoute component={MaintenanceChat} />} />
+          <Route path="/admin/requests" element={<AdminRoute component={Requests} />} />
+          <Route path="/admin/settings" element={<AdminRoute component={Settings} />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
