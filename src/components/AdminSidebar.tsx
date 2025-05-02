@@ -8,6 +8,7 @@ import {
   Settings,
   Menu,
   LogOut,
+  PieChart,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -110,6 +111,13 @@ const AdminSidebar: React.FC<AdminSidebarProps> = ({
           label="Dashboard"
           isActive={currentRoute === "/admin/dashboard"}
           onClick={() => setCurrentRoute("/admin/dashboard")}
+        />
+        <NavLink
+          to="/admin/maintenance-stats"
+          icon={<PieChart size={20} />}
+          label="Maintenance Stats"
+          isActive={currentRoute === "/admin/maintenance-stats"}
+          onClick={() => setCurrentRoute("/admin/maintenance-stats")}
         />
         <NavLink
           to="/admin/maintenance-chat"

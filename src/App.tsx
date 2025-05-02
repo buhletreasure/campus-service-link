@@ -10,6 +10,7 @@ import Dashboard from "./pages/admin/Dashboard";
 import MaintenanceChat from "./pages/admin/MaintenanceChat";
 import Requests from "./pages/admin/Requests";
 import Settings from "./pages/admin/Settings";
+import MaintenanceStats from "./pages/admin/MaintenanceStats";
 import AdminLayout from "./components/AdminLayout";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/admin/dashboard" element={<AdminRoute component={Dashboard} />} />
           <Route path="/admin/maintenance-chat" element={<AdminRoute component={MaintenanceChat} />} />
           <Route path="/admin/requests" element={<AdminRoute component={Requests} />} />
+          <Route path="/admin/maintenance-stats" element={<AdminRoute component={MaintenanceStats} />} />
           <Route path="/admin/settings" element={<AdminRoute component={Settings} />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

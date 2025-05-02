@@ -3,8 +3,6 @@ import React from "react";
 import { BarChart2, MessageSquare, Calendar } from "lucide-react";
 import { StatCard } from "@/components/dashboard/StatCard";
 import { BookingChart } from "@/components/dashboard/BookingChart";
-import { MaintenanceStatusChart } from "@/components/dashboard/MaintenanceStatusChart";
-import { RecentRequests } from "@/components/dashboard/RecentRequests";
 import { AdminProfile } from "@/components/dashboard/AdminProfile";
 
 export default function Dashboard() {
@@ -51,12 +49,9 @@ export default function Dashboard() {
         />
       </div>
 
-      <div className="grid gap-4 md:grid-cols-6">
+      <div className="grid gap-4">
         <BookingChart />
-        <MaintenanceStatusChart />
       </div>
-
-      <RecentRequests />
     </div>
   );
 }
