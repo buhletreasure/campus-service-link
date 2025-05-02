@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
@@ -20,7 +19,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Building, CheckSquare, SquareOff, RefreshCw } from "lucide-react";
+import { Building, CheckSquare, Square, RefreshCw } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { toast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
@@ -225,7 +224,7 @@ export default function RoomAvailabilityToggle() {
             >
               {selectedRooms.length === rooms.length ? (
                 <>
-                  <SquareOff className="h-4 w-4 mr-2" />
+                  <Square className="h-4 w-4 mr-2" />
                   Deselect All
                 </>
               ) : (
