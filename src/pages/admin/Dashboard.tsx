@@ -5,6 +5,7 @@ import { StatCard } from "@/components/dashboard/StatCard";
 import { BookingChart } from "@/components/dashboard/BookingChart";
 import { MaintenanceStatusChart } from "@/components/dashboard/MaintenanceStatusChart";
 import { RecentRequests } from "@/components/dashboard/RecentRequests";
+import { AdminProfile } from "@/components/dashboard/AdminProfile";
 
 export default function Dashboard() {
   return (
@@ -15,6 +16,13 @@ export default function Dashboard() {
           Welcome to the admin dashboard. Here's an overview of campus activity.
         </p>
       </div>
+
+      <AdminProfile 
+        name="John Doe"
+        email="john.doe@tut.ac.za"
+        role="Campus Administrator"
+        department="Facility Management"
+      />
 
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         <StatCard
