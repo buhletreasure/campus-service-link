@@ -84,8 +84,8 @@ const AdminSidebar: React.FC<AdminSidebarProps> = ({
         {!isCollapsed && (
           <div className="flex items-center">
             <img
-              src="/tut-logo.png"
-              alt="TUT Logo"
+              src="/tshwane-university-logo.png"
+              alt="Tshwane University of Technology"
               className="h-8 w-auto mr-2"
             />
             <span className="font-bold text-campus-dark text-xl">SCSP</span>
