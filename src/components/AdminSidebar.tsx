@@ -9,6 +9,7 @@ import {
   Menu,
   LogOut,
   PieChart,
+  Building,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -84,7 +85,7 @@ const AdminSidebar: React.FC<AdminSidebarProps> = ({
         {!isCollapsed && (
           <div className="flex items-center">
             <img
-              src="/tshwane-university-logo.png"
+              src="/tut-logo.png"
               alt="Tshwane University of Technology"
               className="h-8 w-auto mr-2"
             />
@@ -135,8 +136,8 @@ const AdminSidebar: React.FC<AdminSidebarProps> = ({
         />
         <NavLink
           to="/admin/settings"
-          icon={<Settings size={20} />}
-          label="Settings"
+          icon={<Building size={20} />}
+          label="Campus Resources"
           isActive={currentRoute === "/admin/settings"}
           onClick={() => setCurrentRoute("/admin/settings")}
         />

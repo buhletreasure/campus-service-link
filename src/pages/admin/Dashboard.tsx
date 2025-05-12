@@ -10,11 +10,18 @@ import { RecentRequests } from "@/components/dashboard/RecentRequests";
 export default function Dashboard() {
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
-        <p className="text-muted-foreground mt-2">
-          Welcome to the admin dashboard. Here's an overview of campus activity.
-        </p>
+      <div className="flex items-center gap-4">
+        <img 
+          src="/tut-logo.png" 
+          alt="Tshwane University of Technology" 
+          className="h-16 w-auto" 
+        />
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
+          <p className="text-muted-foreground mt-2">
+            Welcome to the admin dashboard. Here's an overview of campus activity.
+          </p>
+        </div>
       </div>
 
       <AdminProfile 
