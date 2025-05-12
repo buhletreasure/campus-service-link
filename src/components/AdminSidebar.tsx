@@ -11,6 +11,7 @@ import {
   PieChart,
   Building,
   School,
+  FileText
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -148,6 +149,13 @@ const AdminSidebar: React.FC<AdminSidebarProps> = ({
           label="Lecturer Management"
           isActive={currentRoute === "/admin/lecturers"}
           onClick={() => setCurrentRoute("/admin/lecturers")}
+        />
+        <NavLink
+          to="/admin/reports"
+          icon={<FileText size={20} />}
+          label="Reports"
+          isActive={currentRoute === "/admin/reports"}
+          onClick={() => setCurrentRoute("/admin/reports")}
         />
       </div>
 
