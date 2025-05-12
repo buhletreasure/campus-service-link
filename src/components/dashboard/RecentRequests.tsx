@@ -45,14 +45,6 @@ const recentRequests = [
     requestedBy: "Sarah Davis",
     date: "2025-04-30",
   },
-  {
-    id: "REQ-005",
-    type: "Maintenance",
-    description: "Leaking water fountain near library",
-    status: "Resolved",
-    requestedBy: "Robert Wilson",
-    date: "2025-04-29",
-  },
 ];
 
 const getStatusColor = (status: string) => {
@@ -74,7 +66,7 @@ const getStatusColor = (status: string) => {
 
 export function RecentRequests() {
   return (
-    <Card className="col-span-6">
+    <Card>
       <CardHeader>
         <CardTitle>Recent Requests</CardTitle>
       </CardHeader>
@@ -86,8 +78,6 @@ export function RecentRequests() {
               <TableHead>Type</TableHead>
               <TableHead className="hidden md:table-cell">Description</TableHead>
               <TableHead>Status</TableHead>
-              <TableHead className="hidden md:table-cell">Requested By</TableHead>
-              <TableHead className="hidden md:table-cell">Date</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -103,8 +93,6 @@ export function RecentRequests() {
                     {request.status}
                   </Badge>
                 </TableCell>
-                <TableCell className="hidden md:table-cell">{request.requestedBy}</TableCell>
-                <TableCell className="hidden md:table-cell">{request.date}</TableCell>
               </TableRow>
             ))}
           </TableBody>

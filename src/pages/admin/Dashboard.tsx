@@ -1,9 +1,11 @@
 
-import React from "react";
-import { BarChart2, MessageSquare, Calendar } from "lucide-react";
+import React, { useState } from "react";
+import { BarChart2, MessageSquare, Calendar, Users } from "lucide-react";
 import { StatCard } from "@/components/dashboard/StatCard";
 import { BookingChart } from "@/components/dashboard/BookingChart";
 import { AdminProfile } from "@/components/dashboard/AdminProfile";
+import { UserManagement } from "@/components/dashboard/UserManagement";
+import { RecentRequests } from "@/components/dashboard/RecentRequests";
 
 export default function Dashboard() {
   return (
@@ -36,10 +38,10 @@ export default function Dashboard() {
           trend={{ value: 5, isPositive: false }}
         />
         <StatCard
-          title="Avg. Response Time"
-          value="1.2 hours"
-          icon={BarChart2}
-          trend={{ value: 18, isPositive: true }}
+          title="Registered Users"
+          value="342"
+          icon={Users}
+          trend={{ value: 8, isPositive: true }}
         />
         <StatCard
           title="Room Utilization"
@@ -47,6 +49,11 @@ export default function Dashboard() {
           icon={BarChart2}
           trend={{ value: 3, isPositive: true }}
         />
+      </div>
+
+      <div className="grid gap-6 grid-cols-1 lg:grid-cols-2">
+        <UserManagement />
+        <RecentRequests />
       </div>
 
       <div className="grid gap-4">
