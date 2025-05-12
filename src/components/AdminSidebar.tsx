@@ -157,6 +157,13 @@ const AdminSidebar: React.FC<AdminSidebarProps> = ({
           isActive={currentRoute === "/admin/reports"}
           onClick={() => setCurrentRoute("/admin/reports")}
         />
+        <NavLink
+          to="/admin/system-settings"
+          icon={<Settings size={20} />}
+          label="Settings"
+          isActive={currentRoute === "/admin/system-settings"}
+          onClick={() => setCurrentRoute("/admin/system-settings")}
+        />
       </div>
 
       <div className="mt-auto p-4 border-t border-gray-200">

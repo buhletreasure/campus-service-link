@@ -12,6 +12,7 @@ import Settings from "./pages/admin/Settings";
 import MaintenanceStats from "./pages/admin/MaintenanceStats";
 import Lecturers from "./pages/admin/Lecturers";
 import Reports from "./pages/admin/Reports";
+import SystemSettings from "./pages/admin/SystemSettings";
 import AdminLayout from "./components/AdminLayout";
 
 const queryClient = new QueryClient();
@@ -37,6 +38,7 @@ const App = () => (
           <Route path="/admin/settings" element={<AdminRoute component={Settings} />} />
           <Route path="/admin/lecturers" element={<AdminRoute component={Lecturers} />} />
           <Route path="/admin/reports" element={<AdminRoute component={Reports} />} />
+          <Route path="/admin/system-settings" element={<AdminRoute component={SystemSettings} />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
